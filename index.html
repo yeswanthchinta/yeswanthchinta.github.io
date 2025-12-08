@@ -1,407 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Yeswanth Chinta – Analytics & Measurement</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Professional site for Yeswanth Chinta – marketing & measurement analytics, MMM, experimentation, and media optimization." />
-  <style>
-    :root {
-      --bg: #020617;
-      --bg-alt: #020617;
-      --accent: #38bdf8;
-      --accent-soft: rgba(56, 189, 248, 0.15);
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-      --border: #1f2937;
-      --max-width: 820px;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yeswanth Chinta – Analytics & Measurement</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #020617 0, #000 60%);
-      color: var(--text);
-      line-height: 1.7;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .page {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 32px 20px 64px;
-    }
-
-    /* Top bar */
-    .topbar {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-bottom: 40px;
-    }
-
-    @media (min-width: 768px) {
-      .topbar {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-      }
-    }
-
-    .brand {
-      font-size: 0.9rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      font-size: 0.86rem;
-    }
-
-    .nav a {
-      text-decoration: none;
-      color: var(--muted);
-      padding-bottom: 2px;
-      border-bottom: 1px solid transparent;
-    }
-
-    .nav a:hover {
-      color: var(--accent);
-      border-bottom-color: var(--accent);
-    }
-
-    /* Hero */
-    .hero {
-      margin-bottom: 48px;
-    }
-
-    .hero-name {
-      font-size: clamp(2.2rem, 4vw, 2.8rem);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    .hero-title {
-      font-size: 1.05rem;
-      color: var(--muted);
-      margin-bottom: 14px;
-    }
-
-    .hero-tagline {
-      font-size: 1rem;
-      max-width: 38rem;
-      color: #e5e7eb;
-    }
-
-    .hero-actions {
-      margin-top: 18px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .btn {
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      font-size: 0.85rem;
-      padding: 7px 14px;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      cursor: pointer;
-      background: transparent;
-      color: var(--text);
-    }
-
-    .btn-primary {
-      background: radial-gradient(circle at top left, #38bdf8, #0284c7);
-      color: #0b1120;
-      border: none;
-    }
-
-    .btn-primary:hover {
-      text-decoration: none;
-      filter: brightness(1.05);
-    }
-
-    .btn-ghost:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    /* Sections */
-    section {
-      padding: 22px 0;
-      border-top: 1px solid var(--border);
-    }
-
-    section:first-of-type {
-      border-top: none;
-    }
-
-    .section-label {
-      font-size: 0.75rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 6px;
-    }
-
-    .section-title {
-      font-size: 1.05rem;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 0.95rem;
-      color: #d1d5db;
-    }
-
-    .muted {
-      color: var(--muted);
-    }
-
-    /* Lists */
-    .inline-list {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px 14px;
-      font-size: 0.9rem;
-      margin-top: 6px;
-    }
-
-    .inline-list li::before {
-      content: "• ";
-      color: var(--muted);
-    }
-
-    /* Experience & Projects */
-    .item {
-      margin-top: 14px;
-    }
-
-    .item-heading {
-      font-size: 0.98rem;
-      font-weight: 600;
-    }
-
-    .item-meta {
-      font-size: 0.82rem;
-      color: var(--muted);
-      margin-top: 2px;
-    }
-
-    .item-body {
-      font-size: 0.93rem;
-      margin-top: 6px;
-      color: #e5e7eb;
-    }
-
-    .item-list {
-      margin-top: 6px;
-      padding-left: 18px;
-    }
-
-    .item-list li {
-      font-size: 0.9rem;
-      margin-bottom: 3px;
-    }
-
-    /* Contact */
-    .contact-list {
-      list-style: none;
-      margin-top: 8px;
-      font-size: 0.93rem;
-    }
-
-    .contact-list li {
-      margin-bottom: 4px;
-    }
-
-    footer {
-      margin-top: 32px;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-  </style>
-</head>
-<body>
-  <div class="page">
-    <header class="topbar">
-      <div class="brand">YESWANTH CHINTA</div>
-      <nav class="nav">
-        <a href="#about">ABOUT</a>
-        <a href="#skills">SKILLS</a>
-        <a href="#experience">EXPERIENCE</a>
-        <a href="#projects">PROJECTS</a>
-        <a href="#contact">CONTACT</a>
-      </nav>
+  <body>
+    <header id="header" class="header">
+      <div class="container container-lg">
+        <div class="header-nav">
+          <a
+            href="#home"
+            class="logo"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            >Yeswanth Chinta</a
+          >
+          <nav id="nav" class="nav">
+            <ul class="nav-list" data-aos="fade-down" data-aos-duration="1000">
+              <li class="nav-item">
+                <a href="#home" class="nav-link active">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#about" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="#timeline" class="nav-link">Career Overview</a>
+              </li>
+              <li class="nav-item">
+                <a href="#projects" class="nav-link">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a href="#contact" class="nav-link">Contact</a>
+              </li>
+            </ul>
+            <button id="nav-btn" class="nav-btn">
+              <img
+                id="nav-btn-img"
+                src="img/icons/open.svg"
+                alt="Navigation button"
+              />
+            </button>
+          </nav>
+        </div>
+      </div>
     </header>
 
-    <main>
-      <!-- Hero -->
-      <section class="hero">
-        <h1 class="hero-name">Analytics & Measurement</h1>
-        <div class="hero-title">Marketing Mix Modeling · Experimentation · Causal Measurement</div>
-        <p class="hero-tagline">
-          I help brands make confident, data-driven investment decisions by combining
-          Marketing Mix Modeling, experimentation, and clear storytelling for stakeholders.
-        </p>
-        <div class="hero-actions">
-          <!-- Make sure your file is named exactly Yeswanth_Chinta_Resume.pdf in the repo -->
-          <a class="btn btn-primary" href="Yeswanth_Chinta_Resume.pdf" target="_blank" rel="noopener">
-            View Resume
-          </a>
-          <a class="btn btn-ghost" href="#contact">
-            Contact Me
-          </a>
+    <section id="home" class="hero">
+      <div class="container container-lg">
+        <div
+          class="hero-row"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-out"
+          data-aos-delay="500"
+          data-aos-duration="1000"
+        >
+          <div class="hero-content">
+            <span class="hero-greeting"> Hello, I am</span>
+            <h1 class="hero-heading">Yeswanth Chinta</h1>
+            <span class="hero-heading-subtitle"
+              >Marketing & Measurement Analytics</span
+            >
+            <div class="about-social-list">
+              <div class="social-links-row">
+                <a href="https://www.linkedin.com/in/yeswanth-chinta/">
+                  <img
+                    src="img/social_icons/linkedin.svg"
+                    alt="Link to linkedin profile"
+                  />
+                </a>
+                
+                <a href="mailto:yeswanthreddy.2501@gmail.com">
+                  <img
+                    src="img/social_icons/email.svg"
+                    alt="Link to GitHub account"
+                  />
+                </a>
+
+                <a href="tel:+19523938192">
+                  <img
+                    src="img/social_icons/phone.svg"
+                    alt="Link to linkedin profile"
+                  />
+                </a>
+                
+                <a href="https://github.com/yeswanthchinta">
+                  <img
+                    src="img/social_icons/github.svg"
+                    alt="Link to GitHub account"
+                  />
+                </a> 
+              </div>
+            </div>
+
+            <div>
+              <a href="#projects" class="btn">My Portfolio</a>
+              <a href="#contact" class="btn btn-white">Contact Me</a>
+            </div>
+          </div>
+          <div class="hero-img">
+            <img
+              src="img/hero/hero.png"
+              alt="Picture of Christian Buehner taken from Unsplash</a>
+              "
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-title">
+          <h2 class="title">About Me</h2>
+        </div>
+        <div class="about-row">
+          <div
+            class="about-content"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <p class="about-descr">
+              Hi, I’m Yeswanth — a marketing analytics and measurement strategist passionate
+              about helping brands understand what truly drives growth.
+              <br /><br />
+              My work sits at the intersection of Marketing Mix Modeling (MMM), experimentation,
+              and incrementality testing, where I translate complex analytical outputs into
+              simple, actionable guidance for marketing, media, and finance teams.
+              <br /><br />
+              Based in NYC/NJ, I enjoy blending technical problem-solving with clear storytelling
+              to influence budgets, shape channel strategy, and support smarter, more confident
+              planning.
+            </p>
+            <div class="about-download-btn">
+              <a href="Yeswanth_Chinta_Resume.pdf" class="btn btn-white" target="_blank" rel="noopener"> Download Resume </a>
+            </div>
+          </div>
+          <div
+            class="about-skills"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+          >
+            <div class="skill">
+              <div class="skill-title">Marketing Mix Modeling (MMM)</div>
+              <div class="skill-percent">95%</div>
+              <div class="skill-bar__progress">
+                <div class="skill-bar__fill" data-progress="95"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-title">Experimentation & Incrementality Testing</div>
+              <div class="skill-percent">90%</div>
+              <div class="skill-bar__progress">
+                <div class="skill-bar__fill" data-progress="90"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-title">Causal Inference & Measurement Science</div>
+              <div class="skill-percent">85%</div>
+              <div class="skill-bar__progress">
+                <div class="skill-bar__fill" data-progress="85"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-title">SQL & Python (Analytics + Modeling)</div>
+              <div class="skill-percent">88%</div>
+              <div class="skill-bar__progress">
+                <div class="skill-bar__fill" data-progress="88"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill-title">Analytics Storytelling & Communication</div>
+              <div class="skill-percent">92%</div>
+              <div class="skill-bar__progress">
+                <div class="skill-bar__fill" data-progress="92"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="services-row">
+          <div
+            class="service-card"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="50"
+          >
+            <img class="service-card-img" src="img/services/01.svg" alt="" />
+            <h3 class="service-card-title">Measurement Science & Causal Inference</h3>
+            <p>
+                    Using rigorous causal frameworks to distinguish correlation from true impact.
+                    I build measurement systems that isolate incrementality and guide confident decision-making.
+            </p>
+          </div>
+
+          <div
+            class="service-card"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <img class="service-card-img" src="img/services/02.svg" alt="" />
+            <h3 class="service-card-title">Marketing Mix Modeling (MMM)</h3>
+            <p>
+              Building scalable MMM solutions that uncover real performance drivers and
+              guide smarter budget allocation across channels.
+            </p>
+          </div>
+
+          <div
+            class="service-card"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="500"
+          >
+            <img class="service-card-img" src="img/services/03.svg" alt="" />
+            <h3 class="service-card-title">Experimentation & Incrementality</h3>
+            <p>
+                Designing and analyzing A/B tests and holdout experiments that measure causal
+                lift and validate marketing strategies with scientific precision.
+            </p>
+          </div>
+
+          <div
+            class="service-card"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="500"
+          >
+            <img class="service-card-img" src="img/services/03.svg" alt="" />
+            <h3 class="service-card-title">Analytics Storytelling & Strategy</h3>
+            <p>
+                    Translating complex analytics into clear, actionable insights that influence
+                    budgets, shape channel strategy, and support smarter planning.
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+  
+      <section id="timeline" class="timeline">
+        <div class="container container-lg">
+          <div class="timeline-title">
+            <h2 class="title">Career Overview</h2>
+          </div>
+
+          <div class="timeline-group">
+            <h3 class="timeline-heading">Work Experience</h3>
+
+            <div class="timeline-row">
+              <div class="timeline-date">2022 – Present</div>
+              <div class="timeline-role">Marketing Analytics Consultant</div>
+              <div class="timeline-org">Ipsos MMA · New York, NY</div>
+            </div>
+
+            <div class="timeline-row">
+              <div class="timeline-date">2019 – 2022</div>
+              <div class="timeline-role">Business / Marketing Analytics Consultant</div>
+              <div class="timeline-org">Previous Company</div>
+            </div>
+          </div>
+
+          <div class="timeline-group">
+            <h3 class="timeline-heading">Education</h3>
+
+            <div class="timeline-row">
+              <div class="timeline-date">2017 – 2019</div>
+              <div class="timeline-role">M.S. in Business Analytics</div>
+              <div class="timeline-org">Carlson School of Management</div>
+            </div>
+
+            <div class="timeline-row">
+              <div class="timeline-date">2012 – 2016</div>
+              <div class="timeline-role">B.Tech (placeholder)</div>
+              <div class="timeline-org">Your University Name</div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- About -->
-      <section id="about">
-        <div class="section-label">ABOUT</div>
-        <h2 class="section-title">Who I am</h2>
-        <p>
-          I’m a marketing analytics and measurement specialist with <strong>5+ years</strong> of experience helping
-          retail and e-commerce brands answer “what’s working?” across channels. My work spans
-          <strong>Marketing Mix Modeling (MMM)</strong>, <strong>incrementality & lift tests</strong>, and
-          <strong>experimentation</strong>, with a focus on turning complex results into decisions that media,
-          marketing, and finance teams can act on.
-        </p>
-      </section>
 
-      <!-- Skills -->
-      <section id="skills">
-        <div class="section-label">SKILLS</div>
-        <h2 class="section-title">What I work with</h2>
+    <section id="projects" class="projects">
+      <div class="container container-lg">
+        <div class="projects-title">
+          <h2 class="title">Projects</h2>
+        </div>
 
-        <p class="muted">Analytics & Methods</p>
-        <ul class="inline-list">
-          <li>Marketing Mix Modeling (MMM)</li>
-          <li>Experiment design & A/B testing</li>
-          <li>Brand lift & holdout tests</li>
-          <li>Incrementality & causal inference</li>
-          <li>Forecasting & scenario planning</li>
-        </ul>
+        <div class="projects-row">
+          <div
+            class="project-box"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-out"
+            data-aos-duration="1000"
+          >
+            <a href="#!">
+              <img class="project-img" src="img/works/01.jpg" alt="" />
+              <div class="project-mask">
+                <div class="project-caption">
+                  <h5 class="white">Finance Dashboard</h5>
+                  <p class="white">UI/UX Design</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            class="project-box"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-out"
+            data-aos-delay="300"
+            data-aos-duration="1000"
+          >
+            <a href="#!">
+              <img class="project-img" src="img/works/02.jpg" alt="" />
+              <div class="project-mask">
+                <div class="project-caption">
+                  <h5 class="white">Product design</h5>
+                  <p class="white">UI/UX Design</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            class="project-box"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-out"
+            data-aos-delay="600"
+            data-aos-duration="1000"
+          >
+            <a href="#!">
+              <img class="project-img" src="img/works/03.jpg" alt="" />
+              <div class="project-mask">
+                <div class="project-caption">
+                  <h5 class="white">Landing Page</h5>
+                  <p class="white">UI/UX Design, Web Development</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            class="project-box"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-out"
+            data-aos-delay="900"
+            data-aos-duration="1000"
+          >
+            <a href="#!">
+              <img class="project-img" src="img/works/04.jpg" alt="" />
+              <div class="project-mask">
+                <div class="project-caption">
+                  <h5 class="white">Portfolio</h5>
+                  <p class="white">Web Development</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            class="project-box"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-out"
+            data-aos-delay="1200"
+            data-aos-duration="1000"
+          >
+            <a href="#!">
+              <img class="project-img" src="img/works/05.jpg" alt="" />
+              <div class="project-mask">
+                <div class="project-caption">
+                  <h5 class="white">Cosmic Sea</h5>
+                  <p class="white">UI/UX Design, Web Development</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            class="project-box"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-out"
+            data-aos-delay="1500"
+            data-aos-duration="1000"
+          >
+            <a href="#!">
+              <img class="project-img" src="img/works/06.jpg" alt="" />
+              <div class="project-mask">
+                <div class="project-caption">
+                  <h5 class="white">eCommerce</h5>
+                  <p class="white">Web Development</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <p class="muted" style="margin-top: 12px;">Tools & Platforms</p>
-        <ul class="inline-list">
-          <li>SQL</li>
-          <li>Python (pandas, statsmodels, scikit-learn)</li>
-          <li>Advanced Excel</li>
-          <li>Tableau / Power BI / Mode</li>
-          <li>Meta, Google, Snap, DV360, Retail Media</li>
-        </ul>
-      </section>
-
-      <!-- Experience -->
-      <section id="experience">
-        <div class="section-label">EXPERIENCE</div>
-        <h2 class="section-title">Where I’ve been applying this</h2>
-
-        <div class="item">
-          <div class="item-heading">Marketing Analytics Consultant</div>
-          <div class="item-meta">Ipsos MMA · New York, NY · 2022 – Present</div>
-          <p class="item-body">
-            Lead MMM and measurement workstreams for multi-million-dollar media budgets across retail and apparel brands.
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="contact-title">
+          <h2 class="title">Contact</h2>
+        </div>
+        <div class="contact-content">
+          <p>
+            Tell me about your project or what you're working on.
+            <br />
+            I’m always happy to chat about measurement, MMM, and experimentation!
           </p>
-          <ul class="item-list">
-            <li>Built and operationalized MMM to quantify channel impact across paid social, search, display, affiliate, and offline media.</li>
-            <li>Increased planning accuracy by ~20% by combining MMM outputs with in-market lift tests and scenario planning.</li>
-            <li>Partnered with marketing, media, and finance stakeholders to translate results into budget recommendations and playbooks.</li>
-          </ul>
         </div>
 
-        <div class="item">
-          <div class="item-heading">Business / Marketing Analytics Consultant</div>
-          <div class="item-meta">Previous Company · 2019 – 2022</div>
-          <p class="item-body">
-            Supported performance measurement and customer analytics initiatives across digital and CRM channels.
-          </p>
-          <ul class="item-list">
-            <li>Designed and analyzed A/B and geo-based tests to measure incremental revenue and CAC impact.</li>
-            <li>Developed dashboards and reports integrating performance media results with test and MMM learnings.</li>
-          </ul>
+        <form action="https://formspree.io/f/xblnadww" method="POST" class="contactForm" data-aos="zoom-in" data-aos-duration="1000">
+          <div class="input-box">
+            <input type="text" name="name" placeholder="Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              required
+            />
+          </div>
+
+          <textarea
+            name="message"
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <div
+            class="contact-button"
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-out"
+            data-aos-delay="500"
+            data-aos-duration="1000"
+          >
+            <button href="#!" class="btn btn-red" name="submit" type="submit">
+              Send Message
+            </button>
+          </div>
+        </form>
+        <div class="response"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-row">
+          <div class="social-links-row footer-social">
+
+            <a href="https://www.linkedin.com/in/yeswanth-chinta/">
+              <img
+                src="img/social_icons/linkedin.svg"
+                alt="Link to linkedin profile"
+              />
+            </a>
+            
+            <a href="mailto:yeswanthreddy.2501@gmail.com">
+              <img
+                src="img/social_icons/email.svg"
+                alt="Link to GitHub account"
+              />
+            </a>
+
+            <a href="tel:+19523938192">
+              <img
+                src="img/social_icons/phone.svg"
+                alt="Link to linkedin profile"
+              />
+            </a>
+            
+            <a href="https://github.com/yeswanthchinta">
+              <img
+                src="img/social_icons/github.svg"
+                alt="Link to GitHub account"
+              />
+            </a>            
+
+
+          </div>
+
+          <div class="footer-copyright">
+            <p>&copy; Copyright Yeswanth Chinta 2025</p>
+          </div>
         </div>
-      </section>
-
-      <!-- Projects -->
-      <section id="projects">
-        <div class="section-label">PROJECTS</div>
-        <h2 class="section-title">Selected work (sanitized)</h2>
-
-        <div class="item">
-          <div class="item-heading">Unified MMM + Lift Testing for an Apparel Retailer</div>
-          <div class="item-meta">MMM · Geo-lift · Budget optimization</div>
-          <p class="item-body">
-            Built a marketing mix model across paid social, search, display, and retail media, then validated key findings
-            using geo-lift tests. Results fed into annual planning and in-quarter optimizations.
-          </p>
-          <ul class="item-list">
-            <li>Improved budget allocation accuracy by ~20% vs. prior-year planning.</li>
-            <li>Identified under-invested channels with 15–25% higher marginal ROAS.</li>
-          </ul>
-        </div>
-
-        <div class="item">
-          <div class="item-heading">Experimentation Playbook for Subscription Product</div>
-          <div class="item-meta">A/B testing · CUPED · Retention</div>
-          <p class="item-body">
-            Designed an experimentation framework for pricing, onboarding, and lifecycle campaigns, including power analysis,
-            CUPED adjustments, and standardized reporting for stakeholders.
-          </p>
-          <ul class="item-list">
-            <li>Reduced average test duration by ~30% while maintaining statistical power.</li>
-            <li>Helped the marketing team prioritize tests that improved trial-to-paid conversion.</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Contact -->
-      <section id="contact">
-        <div class="section-label">CONTACT</div>
-        <h2 class="section-title">Let’s talk</h2>
-        <p>
-          I’m open to roles in <strong>Measurement Science</strong>, <strong>Marketing Science</strong>,
-          and <strong>Marketing Analytics</strong> with a strong focus on MMM and experimentation.
-        </p>
-        <ul class="contact-list">
-          <li>Email: <a href="mailto:yeswanth.chinta@gmail.com">yeswanth.chinta@gmail.com</a></li>
-          <li>LinkedIn: <a href="https://www.linkedin.com/in/yeswanthchinta" target="_blank" rel="noopener">linkedin.com/in/yeswanthchinta</a></li>
-          <li>Location: New Jersey / NYC area · Open to hybrid / remote</li>
-        </ul>
-      </section>
-    </main>
-
-    <footer>
-      © <span id="year"></span> Yeswanth Chinta · Built with HTML &amp; CSS
+      </div>
     </footer>
-  </div>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
+    <div id="goToTop" class="goToTop">
+      <a href="#home">
+        <img src="img/icons/arrow_up.svg" alt="Back to top"
+      /></a>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="js/main.js"></script>
+  </body>
 </html>
