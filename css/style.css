@@ -200,11 +200,13 @@ section.block { padding: 80px 0; }
 section.block.alt { background: var(--paper-2); }
 .section-head { max-width: 640px; margin-bottom: 48px; }
 .section-head p { font-size: 15px; }
+.section-head.wide { max-width: none; }
+.section-head.wide p { max-width: none; }
 
 /* ---------- About + skills combo ---------- */
 .about-grid {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
+  grid-template-columns: 1.2fr 0.8fr;
   gap: 56px;
   align-items: start;
 }
