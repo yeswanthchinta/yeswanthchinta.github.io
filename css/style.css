@@ -302,6 +302,15 @@ section.block.alt { background: var(--paper-2); }
 .tl-role { font-size: 17px; font-weight: 600; }
 .tl-org { font-size: 14px; color: var(--muted); margin-top: 2px; }
 .tl-desc { font-size: 14px; margin-top: 8px; max-width: 560px; }
+.tl-bullets {
+  font-size: 14px;
+  color: var(--muted);
+  max-width: 640px;
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+.tl-bullets li { margin-bottom: 6px; }
+.tl-bullets li:last-child { margin-bottom: 0; }
 
 /* ---------- Projects ---------- */
 .proj-card {
