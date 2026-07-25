@@ -214,6 +214,34 @@ section.block.alt { background: var(--paper-2); }
 .section-head.wide { max-width: none; }
 .section-head.wide p { max-width: none; }
 
+/* ---------- Sections (dark bookend) ---------- */
+section.block-dark {
+  background: var(--navy);
+  color: #fff;
+}
+section.block-dark h2 { color: #fff; }
+section.block-dark .section-head p:not(.eyebrow) { color: var(--muted-dark); }
+section.block-dark .contact-item { border-bottom-color: var(--line-dark); }
+section.block-dark .contact-item .k { color: var(--muted-dark); }
+section.block-dark .contact-item .v { color: #fff; }
+section.block-dark .contact-item .v a:hover { color: var(--teal); }
+section.block-dark form.contact-form input,
+section.block-dark form.contact-form textarea {
+  background: var(--navy-2);
+  border-color: var(--line-dark);
+  color: #fff;
+}
+section.block-dark form.contact-form input::placeholder,
+section.block-dark form.contact-form textarea::placeholder {
+  color: var(--muted-dark);
+}
+section.block-dark form.contact-form input:focus,
+section.block-dark form.contact-form textarea:focus {
+  border-color: var(--teal-dim);
+}
+
+section.metrics-strip { padding: 40px 0; }
+
 /* ---------- About + skills combo ---------- */
 .about-grid {
   display: grid;
