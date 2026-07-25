@@ -201,6 +201,15 @@ section.block.alt { background: var(--paper-2); }
 .section-head { max-width: 640px; margin-bottom: 48px; }
 .section-head p { font-size: 15px; }
 
+/* ---------- About + skills combo ---------- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 56px;
+  align-items: start;
+}
+.about-grid h2 { margin-top: 0; }
+
 /* ---------- Stat / skill bars ---------- */
 .stat-grid {
   display: grid;
@@ -425,6 +434,7 @@ footer .wrap {
   h1 { font-size: 30px; }
   .hero-grid { grid-template-columns: 1fr; }
   .hero-photo-wrap { justify-self: start; width: 200px; height: 200px; order: -1; }
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .stat-grid { grid-template-columns: repeat(2, 1fr); }
   .card-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
