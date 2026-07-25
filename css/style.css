@@ -210,7 +210,7 @@ p { color: var(--muted); margin: 0; }
 section.block { padding: 80px 0; }
 section.block.alt { background: var(--paper-2); }
 .section-head { max-width: 640px; margin-bottom: 48px; }
-.section-head p { font-size: 15px; }
+.section-head p { font-size: 14px; }
 .section-head.wide { max-width: none; }
 .section-head.wide p { max-width: none; }
 
@@ -222,6 +222,7 @@ section.block.alt { background: var(--paper-2); }
   align-items: start;
 }
 .about-grid h2 { margin-top: 0; }
+.about-grid > div > p:not(.eyebrow) { font-size: 14px; }
 
 /* ---------- Stat / skill bars ---------- */
 .stat-grid {
@@ -251,7 +252,7 @@ section.block.alt { background: var(--paper-2); }
 .skill-top {
   display: flex;
   justify-content: space-between;
-  font-size: 13px;
+  font-size: 14px;
   margin-bottom: 6px;
 }
 .skill-top span:last-child { font-family: var(--mono); color: var(--muted); }
@@ -349,7 +350,7 @@ section.block.alt { background: var(--paper-2); }
   font-weight: 600;
 }
 .proj-body h3 { margin: 8px 0; }
-.proj-body p { font-size: 13px; }
+.proj-body p { font-size: 14px; }
 
 /* ---------- Contact ---------- */
 .contact-grid {
