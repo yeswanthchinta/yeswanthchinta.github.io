@@ -11,40 +11,65 @@
 
 <nav class="nav">
   <div class="wrap">
-    <a class="brand" href="index.html">Yeswanth Chinta<span>.</span></a>
+    <a class="brand" href="#home">Yeswanth Chinta<span>.</span></a>
     <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-    <a class="nav-cta" href="Yeswanth_Chinta_Resume.pdf">Resume</a>
+    <div class="nav-right">
+      <a class="nav-cta" href="Yeswanth_Chinta_Resume.pdf">Resume</a>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </nav>
 
-<header class="hero">
+<header class="hero" id="home">
   <div class="wrap">
-    <p class="eyebrow on-dark">Marketing &amp; measurement analytics</p>
-    <h1>Turning marketing data into decisions you can trust.</h1>
-    <p class="lede">I help brands separate correlation from real causal impact — through marketing mix modeling, experimentation, and incrementality testing that hold up under scrutiny.</p>
-    <div class="actions">
-      <a class="btn btn-primary" href="projects.html">View work</a>
-      <a class="btn btn-ghost-dark" href="contact.html">Get in touch</a>
-    </div>
-    <div class="spark">
-      <div class="up" style="height:18px"></div>
-      <div style="height:10px"></div>
-      <div class="up" style="height:30px"></div>
-      <div class="up" style="height:24px"></div>
-      <div style="height:14px"></div>
-      <div class="up" style="height:38px"></div>
-      <div class="up" style="height:20px"></div>
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow on-dark">Marketing &amp; measurement analytics</p>
+        <h1>Turning marketing data into decisions you can trust.</h1>
+        <p class="lede">I help brands separate correlation from real causal impact — through marketing mix modeling, experimentation, and incrementality testing that hold up under scrutiny.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#projects">View work</a>
+          <a class="btn btn-ghost-dark" href="#contact">Get in touch</a>
+        </div>
+        <div class="spark">
+          <div class="up" style="height:18px"></div>
+          <div style="height:10px"></div>
+          <div class="up" style="height:30px"></div>
+          <div class="up" style="height:24px"></div>
+          <div style="height:14px"></div>
+          <div class="up" style="height:38px"></div>
+          <div class="up" style="height:20px"></div>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <img src="img/hero/hero.png" alt="Yeswanth Chinta">
+      </div>
     </div>
   </div>
 </header>
 
-<section class="block">
+<main>
+
+<section class="block" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">About</p>
+      <h2>What I do</h2>
+      <p style="margin-bottom:14px;">Hi, I'm Yeswanth — a marketing analytics and measurement strategist passionate about helping brands understand what truly drives growth.</p>
+      <p style="margin-bottom:14px;">My work sits at the intersection of marketing mix modeling (MMM), experimentation, and incrementality testing, where I translate complex analytical outputs into simple, actionable guidance for marketing, media, and finance teams.</p>
+      <p>Based in NYC/NJ, I enjoy blending technical problem-solving with clear storytelling to influence budgets, shape channel strategy, and support smarter, more confident planning.</p>
+    </div>
+    <a class="btn btn-ghost-light" href="Yeswanth_Chinta_Resume.pdf">Download resume</a>
+  </div>
+</section>
+
+<section class="block alt">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">Focus areas</p>
@@ -76,35 +101,177 @@
   </div>
 </section>
 
-<section class="block alt">
+<section class="block">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">Snapshot</p>
-      <h2>A quick read on my background</h2>
+      <p class="eyebrow">Skills</p>
+      <h2>Core capabilities</h2>
     </div>
-    <div class="stat-grid">
-      <div class="stat-card">
-        <div class="stat-num">95%</div>
-        <div class="stat-label">Marketing mix modeling</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">90%</div>
-        <div class="stat-label">Experimentation &amp; testing</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">88%</div>
-        <div class="stat-label">SQL &amp; Python</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">92%</div>
-        <div class="stat-label">Analytics storytelling</div>
-      </div>
+
+    <div class="skill-row">
+      <div class="skill-top"><span>Marketing mix modeling (MMM)</span><span>95%</span></div>
+      <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
     </div>
-    <div style="margin-top:36px;">
-      <a class="btn btn-ghost-light" href="about.html">More about me →</a>
+    <div class="skill-row">
+      <div class="skill-top"><span>Experimentation &amp; incrementality testing</span><span>90%</span></div>
+      <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-top"><span>Causal inference &amp; measurement science</span><span>85%</span></div>
+      <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-top"><span>SQL &amp; Python (analytics + modeling)</span><span>88%</span></div>
+      <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-top"><span>Analytics storytelling &amp; communication</span><span>92%</span></div>
+      <div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
     </div>
   </div>
 </section>
+
+<section class="block alt" id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Experience</p>
+      <h2>Career overview</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">2022 – Present</div>
+        <div class="tl-role">Marketing Analytics Consultant</div>
+        <div class="tl-org">Ipsos MMA · New York, NY</div>
+        <div class="tl-desc">Add 2–3 bullet points here on MMM builds, experimentation design, or client impact once you're ready to fill this in.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2019 – 2022</div>
+        <div class="tl-role">Business / Marketing Analytics Consultant</div>
+        <div class="tl-org">Previous company <span style="color:var(--muted); font-weight:400;">(placeholder — add company name)</span></div>
+        <div class="tl-desc">Add a short description of scope and impact here.</div>
+      </div>
+    </div>
+
+    <div class="section-head" style="margin-top:56px;">
+      <p class="eyebrow">Education</p>
+      <h2>Academic background</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">2017 – 2019</div>
+        <div class="tl-role">M.S. in Business Analytics</div>
+        <div class="tl-org">Carlson School of Management</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2012 – 2016</div>
+        <div class="tl-role">B.Tech <span style="color:var(--muted); font-weight:400;">(placeholder — add your degree)</span></div>
+        <div class="tl-org">Your university name</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Projects</p>
+      <h2>Selected work</h2>
+      <p>Placeholder cards below — swap in real MMM builds, experiments, or dashboards when ready.</p>
+    </div>
+    <div class="card-grid" style="grid-template-columns:repeat(2,1fr);">
+
+      <div class="proj-card">
+        <div class="proj-thumb">
+          <div style="height:22px"></div><div class="hi" style="height:40px"></div><div style="height:14px"></div><div class="hi" style="height:30px"></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tag">MMM</div>
+          <h3>Marketing mix model — CPG brand</h3>
+          <p>Placeholder — describe the client, model scope, and the budget decisions it informed.</p>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-thumb">
+          <div class="hi" style="height:34px"></div><div style="height:16px"></div><div class="hi" style="height:26px"></div><div style="height:20px"></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tag">Experimentation</div>
+          <h3>Incrementality test design</h3>
+          <p>Placeholder — describe the test design, holdout structure, and measured lift.</p>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-thumb">
+          <div style="height:16px"></div><div class="hi" style="height:38px"></div><div class="hi" style="height:24px"></div><div style="height:12px"></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tag">Measurement</div>
+          <h3>Attribution &amp; causal impact analysis</h3>
+          <p>Placeholder — describe the causal framework used and the outcome for the client.</p>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-thumb">
+          <div class="hi" style="height:20px"></div><div class="hi" style="height:36px"></div><div style="height:18px"></div><div class="hi" style="height:28px"></div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-tag">Storytelling</div>
+          <h3>Executive measurement dashboard</h3>
+          <p>Placeholder — describe the audience, tools used, and how it changed decision-making.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Contact</p>
+      <h2>Let's talk</h2>
+      <p>Tell me about your project or what you're working on — always happy to chat about measurement, MMM, and experimentation.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <form class="contact-form" action="#" method="POST">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="name@company.com" required>
+          <textarea name="message" placeholder="What's on your mind?" required></textarea>
+          <button class="btn btn-primary" type="submit">Send message</button>
+        </form>
+      </div>
+
+      <div>
+        <div class="contact-item">
+          <div class="k">Email</div>
+          <div class="v"><a href="mailto:yeswanthreddy.2501@gmail.com">yeswanthreddy.2501@gmail.com</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="k">Phone</div>
+          <div class="v"><a href="tel:+19523938192">+1 (952) 393-8192</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="k">LinkedIn</div>
+          <div class="v"><a href="https://www.linkedin.com/in/yeswanth-chinta/" target="_blank" rel="noopener">linkedin.com/in/yeswanth-chinta</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="k">GitHub</div>
+          <div class="v"><a href="https://github.com/yeswanthchinta" target="_blank" rel="noopener">github.com/yeswanthchinta</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="k">Location</div>
+          <div class="v">NYC / NJ</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
 
 <footer>
   <div class="wrap">
@@ -118,5 +285,6 @@
   </div>
 </footer>
 
+<script src="js/main.js"></script>
 </body>
 </html>
