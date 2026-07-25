@@ -242,6 +242,37 @@ section.block-dark form.contact-form textarea:focus {
 
 section.metrics-strip { padding: 40px 0; }
 
+/* ---------- Contact icon tiles ---------- */
+.contact-icons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.contact-icon-tile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--line-dark);
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 14px;
+  color: #fff;
+  transition: border-color 0.15s ease;
+}
+.contact-icon-tile:hover { border-color: var(--teal-dim); }
+.ci-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.ci-icon img { width: 15px; height: 15px; }
+.contact-location { margin-top: 16px; font-size: 13px; color: var(--muted-dark); }
+
 /* ---------- About + skills combo ---------- */
 .about-grid {
   display: grid;
