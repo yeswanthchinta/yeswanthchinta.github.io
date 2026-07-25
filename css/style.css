@@ -165,14 +165,25 @@ p { color: var(--muted); margin: 0; }
   margin-top: 16px;
 }
 .hero .actions { display: flex; gap: 12px; margin-top: 32px; }
-.spark {
+.lift-chart { display: block; margin: 40px 0 0; }
+.lift-legend {
   display: flex;
-  align-items: flex-end;
-  gap: 7px;
-  margin: 40px 0 0;
+  gap: 18px;
+  margin-top: 12px;
 }
-.spark div { width: 7px; border-radius: 2px; background: var(--navy-3); }
-.spark div.up { background: var(--teal); }
+.lift-legend span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--muted-dark);
+}
+.lift-legend i {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
 
 .hero-grid {
   display: grid;
